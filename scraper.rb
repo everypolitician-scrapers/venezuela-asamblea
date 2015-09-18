@@ -39,4 +39,4 @@ def scrape_list(url)
   end 
 end
 
-(1..14).each { |i| scrape_list("http://asambleanacional.gob.ve/diputado/ajaxcargardiputados/tipodiputado/1/page/#{i}") }
+(1..14).each { |i| scrape_list("http://www.asambleanacional.gob.ve/diputado/ajaxcargardiputados/tipodiputado/1/page/#{i}") }
