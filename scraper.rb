@@ -30,8 +30,9 @@ def scrape_list(url)
       area_id: td.css('a#linkestado[href*="/estado/"]/@href').text.split('/').last,
       party: td.css('a#linkestado[href*="/partido/"]').text.sub('Partido:',''),
       party_id: td.css('a#linkestado[href*="/partido/"]/@href').text.split('/').last,
-      term: 2015,
+      term: 2016,
       source: td.css('b a/@href').text,
+      last_seen: Date.today.to_s,
     }
     data[:image] = URI.join(url, data[:image]).to_s unless data[:image].to_s.empty?
     data[:source] = URI.join(url, data[:source]).to_s unless data[:source].to_s.empty?
